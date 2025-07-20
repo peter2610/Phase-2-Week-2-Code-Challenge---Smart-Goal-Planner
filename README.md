@@ -79,6 +79,13 @@ When the saved amount reaches the target, the goal is marked as completed.
 Goals display their categories and deadlines.
 
 Deadlines approaching soon or past due are visually indicated (MVP-ready for enhancement).
+🧾 Goal List Display
+
+All goals are listed with key details:
+
+Name, Progress (Saved/Target), Category, Deadline
+
+Deposit inputs and buttons are included per goal.
 
 ## 📦 Getting Started
 
