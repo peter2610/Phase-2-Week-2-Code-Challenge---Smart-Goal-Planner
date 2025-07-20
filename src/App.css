@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+.deposit-form {
+  margin-top: 10px;
+}
+
+.deposit-form input {
+  width: 100px;
+  margin-right: 5px;
+}
+
+.goal-item {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
