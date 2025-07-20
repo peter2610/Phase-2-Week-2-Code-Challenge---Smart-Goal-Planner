@@ -49,7 +49,7 @@ smart-goal-planner/
 │ ├── api.js
 │ └── index.js
 │
-├── db.json # Optional if using JSON server
+├── db.json
 ├── App.css
 └── README.md
 
@@ -125,4 +125,4 @@ Peter Munyambu
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT/PNM License.
