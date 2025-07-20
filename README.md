@@ -1,71 +1,94 @@
-# Getting Started with Create React App
+# 🎯 Smart Goal Planner
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A user-friendly web application that helps individuals set, track, and manage their financial goals. Users can define SMART goals, make deposits, view progress, and stay motivated through clear visual updates.
 
-## Available Scripts
+![how it appears after adding goal, and deposit](image-1.png)
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- ✅ Add and manage multiple goals
+- 📈 Real-time savings tracking
+- 💡 SMART goal principles integration
+- 🏦 Deposit towards goals
+- 📅 calender
+- 📊 Overview dashboard: total goals, savings, and completed goals
+- 📅 Deadline setting with warnings plus calender
+- 🎨 Beautiful and responsive UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🧠 MVP Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| Component   | Description                                          |
+| ----------- | ---------------------------------------------------- |
+| Header      | Displays the app's name in a styled banner           |
+| GoalForm    | Form for adding new SMART goals                      |
+| GoalList    | Lists all user-created goals                         |
+| GoalItem    | Displays each goal with options to deposit or delete |
+| DepositForm | Allows user to deposit money toward a goal           |
+| Overview    | Summary: total goals, saved amount, completed goals  |
+| api.js      | Handles all backend CRUD operations (REST API)       |
 
-### `npm test`
+## 🛠️ Built With
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React.js – frontend framework
+- JavaScript – logic and interaction
+- CSS3 – custom component styling
+- JSON Server (or local API) – mock backend for development
 
-### `npm run build`
+## 📂 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+smart-goal-planner/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+├── src/
+│ ├── components/
+│ │ ├── Header.js
+│ │ ├── GoalForm.js
+│ │ ├── GoalList.js
+│ │ ├── GoalItem.js
+│ │ └── DepositForm.js
+│ ├── App.js
+│ ├── api.js
+│ └── index.js
+│
+├── db.json # Optional if using JSON server
+├── App.css
+└── README.md
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📦 Getting Started
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Node.js and npm installed
+- React project created (or use this one)
+- JSON server or API backend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+bash
+git clone https://github.com/your-username/smart-goal-planner.git
+cd smart-goal-planner
+npm install
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Run the app
 
-## Learn More
+`bash
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+If using JSON Server:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`bash
+npx json-server --watch db.json --port 3000
 
-### Code Splitting
+## 🧪 Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- 🎯 Add categories with icons
+- ⏰ Goal reminders and notifications
+- 📱 Mobile app version
+- 🔐 User authentication for personal tracking
 
-### Analyzing the Bundle Size
+## 🙌 Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Peter Munyambu
 
-### Making a Progressive Web App
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Phase-2-Week-2-Code-Challenge---Smart-Goal-Planner
+This project is licensed under the MIT License.
