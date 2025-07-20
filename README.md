@@ -61,6 +61,11 @@ Users can create goals with:
 Name, Target Amount, Category (dropdown), and Deadline.
 
 Goals are saved and listed immediately.
+📊 Overview Panel
+Displays real-time summary:
+Total number of goals
+Total amount saved
+Number of completed goals
 
 ## 📦 Getting Started
 
