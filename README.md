@@ -74,6 +74,11 @@ Users can deposit money into individual goals.
 Automatically updates the saved amount.
 
 When the saved amount reaches the target, the goal is marked as completed.
+📅 Deadline & Category Tracking
+
+Goals display their categories and deadlines.
+
+Deadlines approaching soon or past due are visually indicated (MVP-ready for enhancement).
 
 ## 📦 Getting Started
 
