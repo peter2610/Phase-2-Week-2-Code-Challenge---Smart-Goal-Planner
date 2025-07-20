@@ -1,10 +1,13 @@
 import React, { useState } from "react";
-import DepositForm from "./DepositForm";
 
 export default function GoalItem({ goal, onDeposit, onUpdate, onDelete }) {
-  const [editing, setEdit] = useState(false);
   const [amount, setAmount] = useState("");
-  const pct = Math.min(100, (goal.savedAmount / goal.targetAmount * 100).toFixed(1));
+  const pct = Math.min(100, ((goal.savedAmount / goal.targetAmount) * 100).toFixed(1));
+  const today = new Date();
+  const deadline = new Date(goal.deadline);
+  const daysLeft = Math.ceil((deadline - today) / (1000 * 60 * 60 * 24));
+  const overdue = daysLeft < 0;
+  const close = daysLeft <= 30 && daysLeft >= 0;
 
   const handleDeposit = () => {
     const amt = parseFloat(amount);
@@ -13,22 +16,26 @@ export default function GoalItem({ goal, onDeposit, onUpdate, onDelete }) {
     setAmount("");
   };
 
-  const today = new Date(), dl = new Date(goal.deadline);
-  const overdue = dl < today && goal.savedAmount < goal.targetAmount;
-  const close = (dl - today)/86400000 < 30 && !overdue;
-
   return (
     <li className={`goal-item ${goal.savedAmount >= goal.targetAmount ? "completed" : overdue ? "overdue" : ""}`}>
       <h4>{goal.name}</h4>
+      <p>Category: {goal.category || "N/A"}</p>
       <p>${goal.savedAmount.toLocaleString()} / ${goal.targetAmount.toLocaleString()}</p>
-      <div className="progress-bar">
-        <div className={`progress-fill ${overdue ? "overdue" : ""}`} style={{width:`${pct}%`}} />
-      </div>
-      {overdue && <p className="warning">Goal is overdue!</p>}
-      {close && <p className="warning">Deadline within 30 days!</p>}
 
-      <div style={{ marginBottom:"1rem" }}>
-        <input type="number" placeholder="Deposit amount" value={amount} onChange={e => setAmount(e.target.value)} />
+      <div className="progress-bar">
+        <div className="progress-fill" style={{ width: `${pct}%` }}></div>
+      </div>
+
+      {overdue && <p className="warning">Overdue by {-daysLeft} days</p>}
+      {close && !overdue && <p className="warning">{daysLeft} days left</p>}
+
+      <div>
+        <input
+          type="number"
+          placeholder="Deposit amount"
+          value={amount}
+          onChange={e => setAmount(e.target.value)}
+        />
         <button onClick={handleDeposit}>Deposit</button>
       </div>
 
@@ -37,10 +44,12 @@ export default function GoalItem({ goal, onDeposit, onUpdate, onDelete }) {
         const target = parseFloat(prompt("New target", goal.targetAmount)) || goal.targetAmount;
         const category = prompt("New category", goal.category) || goal.category;
         const deadline = prompt("New deadline", goal.deadline) || goal.deadline;
-        onUpdate(goal.id, { name, targetAmount:target, category, deadline });
+        onUpdate(goal.id, { name, targetAmount: target, category, deadline });
       }}>Edit</button>
 
-      <button onClick={() => window.confirm("Delete this goal?") && onDelete(goal.id)} style={{marginLeft:".5rem", background:"#c0392b"}}>Delete</button>
+      <button onClick={() => window.confirm("Delete this goal?") && onDelete(goal.id)}>
+        Delete
+      </button>
     </li>
   );
 }

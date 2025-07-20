@@ -7,9 +7,8 @@ function DepositForm({ goal, onDeposit }) {
     e.preventDefault();
     const numeric = parseFloat(amount);
     if (isNaN(numeric) || numeric <= 0) return;
-    
-    const newTotal = goal.savedAmount + numeric;
 
+    const newTotal = goal.savedAmount + numeric;
     onDeposit({ id: goal.id, new: newTotal });
     setAmount("");
   };

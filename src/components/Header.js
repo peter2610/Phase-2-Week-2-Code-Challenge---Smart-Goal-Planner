@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Header() {
   return (
-    <header style={{ padding: "1rem", backgroundColor: "#3498db", color: "#fff", textAlign: "center" }}>
+    <header className="app-header">
       <h1>Smart Goal Planner</h1>
     </header>
   );

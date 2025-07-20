@@ -1,53 +1,88 @@
-.App {
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #2c3e50;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2, h3 {
+  color: #34495e;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  background: #2ecc71;
+  border: none;
   color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background: #27ae60;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.deposit-form {
-  margin-top: 10px;
-}
-
-.deposit-form input {
-  width: 100px;
-  margin-right: 5px;
+.goal-list {
+  list-style: none;
+  padding: 0;
 }
 
 .goal-item {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin-bottom: 10px;
-  border-radius: 8px;
+  background: #ffffff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.goal-item.completed {
+  background: #e1f8e6;
+}
+
+.warning {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+.progress-bar {
+  background: #ecf0f1;
+  border-radius: 5px;
+  height: 20px;
+  margin: 0.5rem 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #3498db;
+  border-radius: 5px;
 }
