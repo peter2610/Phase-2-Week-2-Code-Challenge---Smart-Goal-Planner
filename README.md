@@ -67,6 +67,14 @@ Total number of goals
 Total amount saved
 Number of completed goals
 
+💰 Deposit Function
+
+Users can deposit money into individual goals.
+
+Automatically updates the saved amount.
+
+When the saved amount reaches the target, the goal is marked as completed.
+
 ## 📦 Getting Started
 
 ### Prerequisites
