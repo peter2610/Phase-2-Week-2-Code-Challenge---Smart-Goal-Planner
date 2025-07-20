@@ -53,6 +53,15 @@ smart-goal-planner/
 ├── App.css
 └── README.md
 
+## 🚀 How the MVP Works – Smart Goal Planner
+
+🎯 Goal Creation
+
+Users can create goals with:
+Name, Target Amount, Category (dropdown), and Deadline.
+
+Goals are saved and listed immediately.
+
 ## 📦 Getting Started
 
 ### Prerequisites
